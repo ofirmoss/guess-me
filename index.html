@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Guess Me</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+  <header class="box">
+    <a class="btn btn-primary homePage" href="https://ofirmoss.github.io/portfolio/" role="button">
+      <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
+    <h1>Guess Who</h1>
+    <img src="img/layout/monk.png" />
+
+  </header>
+
+  <main>
+    <section class="gameStart">
+      <h2>Think of Someone...</h2>
+      <button onclick="startGuessing()" class="btn btn-lg btn-success">I'm Ready!</button>
+    </section>
+    <section class="gameQuest" style="display: none">
+      <h2></h2>
+      <button onclick="userResponse('yes')" class="btn btn-info buttons">Yes</button>
+      <button onclick="userResponse('no')" class="btn btn-danger ">No</button>
+    </section>
+    <section class="gameNewQuest" style="display: none">
+      <h2>OK, I gave up...</h2>
+
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="newGuess" class="col-sm-6 control-label">You thought of: </label>
+          <div class="col-sm-6">
+            <input name="newGuess" type="txt" class="form-control" id="newGuess" placeholder="Your Guess" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="newQuest" class="col-sm-6 control-label">Question to differentiate</label>
+          <div class="col-sm-6">
+            <input name="newQuest" type="txt" class="form-control" id="newQuest" placeholder="The answer is YES for yours" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" onclick="addGuess();return false;" class="btn btn-default">Make me Smarter!</button>
+          </div>
+        </div>
+      </form>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <script src="lib/jquery/jquery.js"></script>
+
+
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
